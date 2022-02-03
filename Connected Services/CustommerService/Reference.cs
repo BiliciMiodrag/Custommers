@@ -220,6 +220,18 @@ namespace Custommers.CustommerService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICustommerService/AddCustommer", ReplyAction="http://tempuri.org/ICustommerService/AddCustommerResponse")]
         System.Threading.Tasks.Task<Custommers.CustommerService.Error[]> AddCustommerAsync(Custommers.CustommerService.Custommer custommer);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICustommerService/UpdateCustommer", ReplyAction="http://tempuri.org/ICustommerService/UpdateCustommerResponse")]
+        Custommers.CustommerService.Error[] UpdateCustommer(Custommers.CustommerService.Custommer custommer);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICustommerService/UpdateCustommer", ReplyAction="http://tempuri.org/ICustommerService/UpdateCustommerResponse")]
+        System.Threading.Tasks.Task<Custommers.CustommerService.Error[]> UpdateCustommerAsync(Custommers.CustommerService.Custommer custommer);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICustommerService/DeleteCustommer", ReplyAction="http://tempuri.org/ICustommerService/DeleteCustommerResponse")]
+        void DeleteCustommer(System.Guid ID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICustommerService/DeleteCustommer", ReplyAction="http://tempuri.org/ICustommerService/DeleteCustommerResponse")]
+        System.Threading.Tasks.Task DeleteCustommerAsync(System.Guid ID);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -271,6 +283,22 @@ namespace Custommers.CustommerService {
         
         public System.Threading.Tasks.Task<Custommers.CustommerService.Error[]> AddCustommerAsync(Custommers.CustommerService.Custommer custommer) {
             return base.Channel.AddCustommerAsync(custommer);
+        }
+        
+        public Custommers.CustommerService.Error[] UpdateCustommer(Custommers.CustommerService.Custommer custommer) {
+            return base.Channel.UpdateCustommer(custommer);
+        }
+        
+        public System.Threading.Tasks.Task<Custommers.CustommerService.Error[]> UpdateCustommerAsync(Custommers.CustommerService.Custommer custommer) {
+            return base.Channel.UpdateCustommerAsync(custommer);
+        }
+        
+        public void DeleteCustommer(System.Guid ID) {
+            base.Channel.DeleteCustommer(ID);
+        }
+        
+        public System.Threading.Tasks.Task DeleteCustommerAsync(System.Guid ID) {
+            return base.Channel.DeleteCustommerAsync(ID);
         }
     }
 }

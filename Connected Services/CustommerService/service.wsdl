@@ -58,6 +58,18 @@
   <wsdl:message name="ICustommerService_AddCustommer_OutputMessage">
     <wsdl:part name="parameters" element="tns:AddCustommerResponse" />
   </wsdl:message>
+  <wsdl:message name="ICustommerService_UpdateCustommer_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCustommer" />
+  </wsdl:message>
+  <wsdl:message name="ICustommerService_UpdateCustommer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCustommerResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustommerService_DeleteCustommer_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCustommer" />
+  </wsdl:message>
+  <wsdl:message name="ICustommerService_DeleteCustommer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCustommerResponse" />
+  </wsdl:message>
   <wsdl:portType name="ICustommerService">
     <wsdl:operation name="GetCustommers">
       <wsdl:input wsaw:Action="http://tempuri.org/ICustommerService/GetCustommers" message="tns:ICustommerService_GetCustommers_InputMessage" />
@@ -70,6 +82,14 @@
     <wsdl:operation name="AddCustommer">
       <wsdl:input wsaw:Action="http://tempuri.org/ICustommerService/AddCustommer" message="tns:ICustommerService_AddCustommer_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ICustommerService/AddCustommerResponse" message="tns:ICustommerService_AddCustommer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCustommer">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustommerService/UpdateCustommer" message="tns:ICustommerService_UpdateCustommer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustommerService/UpdateCustommerResponse" message="tns:ICustommerService_UpdateCustommer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCustommer">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustommerService/DeleteCustommer" message="tns:ICustommerService_DeleteCustommer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustommerService/DeleteCustommerResponse" message="tns:ICustommerService_DeleteCustommer_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="NetTcpBinding_ICustommerService" type="tns:ICustommerService">
@@ -96,6 +116,24 @@
     </wsdl:operation>
     <wsdl:operation name="AddCustommer">
       <soap12:operation soapAction="http://tempuri.org/ICustommerService/AddCustommer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCustommer">
+      <soap12:operation soapAction="http://tempuri.org/ICustommerService/UpdateCustommer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCustommer">
+      <soap12:operation soapAction="http://tempuri.org/ICustommerService/DeleteCustommer" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
